@@ -35,7 +35,7 @@ function App() {
 
   async function addNewUser() {
 
-    const { data: newUser } = await axios.post("http://localhost:3005", {
+    const { data: newUser } = await axios.post("http://localhost:3000", {
       name: inputName.current.value,
       age: inputAge.current.value,
     });
