@@ -17,7 +17,7 @@ import {
 
 import Avatar from '../../assets/avatar.svg'
 import Arrow from '../../assets/arrow.svg'
-//import Trash from '../../assets/trash.svg'
+import Trash from '../../assets/trash.svg'
 
 
 function Users() {
@@ -27,7 +27,7 @@ function Users() {
 
   useEffect(() => {
     async function fetchUsers() {
-      const { data: newUsers } = await axios.get("http://localhost:3000/");
+      const { data: newUsers } = await axios.get("http://localhost:3001/");
       setUsers(newUsers);
       console.log("Chamada:useEffect");
     }
@@ -35,7 +35,7 @@ function Users() {
   }, [])
 
   async function deleteUser(userid) {
-    await axios.delete(`http://localhost:3000/${userid}`)
+    await axios.delete(`http://localhost:3001/${userid}`)
     console.log("Oi, fui chamada para excluir")
     console.log(userid)
     const newUsers = users.filter((user) => user.id !== userid)

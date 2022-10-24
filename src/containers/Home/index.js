@@ -27,7 +27,7 @@ import {
 
 
 
-function Home() {
+function App() {
   const [users, setUsers] = useState([]);
   const inputName = useRef();
   const inputAge = useRef();
@@ -68,4 +68,4 @@ function Home() {
 
   );
 }
-export default Home
+export default App
