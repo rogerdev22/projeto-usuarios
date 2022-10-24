@@ -11,7 +11,7 @@ import {
   Image,
   ContainerItens,
   Button,
-//  User
+  //  User
 
 } from "./styles";
 
@@ -22,7 +22,7 @@ import Arrow from '../../assets/arrow.svg'
 
 function Users() {
   const [users, setUsers] = useState([]);
-  
+
 
 
   useEffect(() => {
@@ -49,8 +49,21 @@ function Users() {
       <ContainerItens>
 
         <H1>Usuários</H1>
+        <ul>
 
-  
+          {users.map((user) => (
+
+            <User key={user.id} >
+
+              <p>{user.name}</p> <p> {user.age}</p>
+
+              <button onClick={() => deleteUser(user.id)}>
+                <img src={Trash} alt="lixo" />
+              </button>
+            </User>
+          ))}
+        </ul>
+
 
         <Button >
           <img alt="Seta" src={Arrow} /> Voltar

@@ -3,7 +3,7 @@
 
 import React, { useState, useRef } from "react";
 
-import {link} from 'react-router-dom'
+
 
 
 import axios from "axios";
@@ -27,7 +27,7 @@ import {
 
 
 
-function App() {
+function Home() {
   const [users, setUsers] = useState([]);
   const inputName = useRef();
   const inputAge = useRef();
@@ -62,12 +62,10 @@ function App() {
         <Button onClick={addNewUser}>
           Cadastrar <img alt="Seta" src={Arrow} />
         </Button>
-
-     <link to="/usarios"> Usuarios</link>
-
+  
       </ContainerItens>
     </Container>
 
   );
 }
-export default App
+export default Home
