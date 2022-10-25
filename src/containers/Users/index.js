@@ -53,14 +53,14 @@ function Users() {
 
           {users.map((user) => (
 
-            <User key={user.id} >
+            <Users key={user.id} >
 
               <p>{user.name}</p> <p> {user.age}</p>
 
               <button onClick={() => deleteUser(user.id)}>
                 <img src={Trash} alt="lixo" />
               </button>
-            </User>
+            </Users>
           ))}
         </ul>
 

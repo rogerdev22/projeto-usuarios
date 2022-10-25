@@ -3,14 +3,13 @@
 
 import React, { useState, useRef } from "react";
 
-
+import {Link} from 'react-router-dom'
 
 
 import axios from "axios";
 
 import Casal1 from '../../assets/casal1.svg'
 import Arrow from  '../../assets/arrow.svg'
-
 
 import {
   Container,
@@ -62,10 +61,12 @@ function App() {
         <Button onClick={addNewUser}>
           Cadastrar <img alt="Seta" src={Arrow} />
         </Button>
-  
+        
+      <Link to="/usuarios">USUARIOS</Link>
+
       </ContainerItens>
     </Container>
 
   );
 }
-export default App
+export default App;
